@@ -5,3 +5,8 @@ void jan_kowalski(void)
 {
 	Jan Kowalski
 }
+
+void marcin_nowak(void)
+{
+	Marcin Nowak
+}
