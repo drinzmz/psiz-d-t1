@@ -10,8 +10,8 @@ typedef struct List {
 
 List*initList(void);
 void deinitList(List* pRoot);
-void addCar(List* pRoot, char* plateNum);
-void removeCar(List* pRoot, char* plateNum);
+void addCar(List* pRoot,const char* plateNum);
+void removeCar(List* pRoot,const char* plateNum);
 void printAll(List* pRoot);
 int numberOfElements(List* pRoot);
 
