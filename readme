@@ -6,11 +6,14 @@ void jan_kowalski(void)
 	Jan Kowalski
 }
 
+void marcin_nowak(void)
+{
+	Marcin Nowak
+}
+
 string:: mateusz_piekny(void)
 {
-
 	return "Mateusz Piekny";
-
 }
 
 void anastasiia_proturenko(void)
