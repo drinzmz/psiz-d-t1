@@ -5,3 +5,10 @@ void jan_kowalski(void)
 {
 	Jan Kowalski
 }
+
+string:: mateusz_piekny(void)
+{
+
+	return "Mateusz Piekny";
+
+}
