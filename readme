@@ -12,3 +12,8 @@ string:: mateusz_piekny(void)
 	return "Mateusz Piekny";
 
 }
+
+void anastasiia_proturenko(void)
+{
+	Anastasiia Proturenko
+}
