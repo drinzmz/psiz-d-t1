@@ -21,6 +21,11 @@ void anastasiia_proturenko(void)
 	Anastasiia Proturenko
 }
 
+void damian_batorowicz(void)
+{
+	Damian Batorowicz
+}	
+
 void aleksander_trzeciak(void)
 {
 	Aleksander Trzeciak
