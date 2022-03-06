@@ -25,3 +25,23 @@ void damian_batorowicz(void)
 {
 	Damian Batorowicz
 }	
+
+void aleksander_trzeciak(void)
+{
+	Aleksander Trzeciak
+
+void piotr_orwinski(void)
+{
+	Piotr Orwiński
+}
+
+
+void radoslaw_michalak(void)
+{
+	Radosław Michalak
+}
+
+void yuliia_kovalchuk(void)
+{
+	Yuliia Kovalchuk
+}
