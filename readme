@@ -20,11 +20,19 @@ void anastasiia_proturenko(void)
 {
 	Anastasiia Proturenko
 }
-void piotr_orwinski(void)
 
+void piotr_orwinski(void)
 {
 	Piotr Orwiński
 }
 
 
+void radoslaw_michalak(void)
+{
+	Radosław Michalak
+}
 
+void yuliia_kovalchuk(void)
+{
+	Yuliia Kovalchuk
+}
