@@ -50,3 +50,8 @@ void dominik_szpilski(void)
 {
 	Dominik Szpilski
 }
+
+void daniel_oblak(void)
+{
+	Daniel Obłąk
+}
