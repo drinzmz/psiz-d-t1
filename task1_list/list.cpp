@@ -1,13 +1,40 @@
 #include "pch.h"
 #include "list.h"
+#include "iostream"
+using namespace std;
 
 
 
 List* initList(void)
 {
 	List* pRoot = (List*)malloc(sizeof(*pRoot));
+
+	 if (pRoot != NULL)
+
+		{
+
+			pRoot->pNext = NULL;
+			cout << "Memory allocation succesful";
+
+		}
+
+		else if (pRoot == NULL)
+
+			{
+
+				cout << "Memory allocation error";
+
+			}
+		
+			else
+
+				{
+
+					cout << "Unknown Error";
 	
-	return pRoot;
+				}
+
+				return pRoot;
 }
 
 void deinitList(List* pRoot)
