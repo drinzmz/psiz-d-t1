@@ -6,8 +6,13 @@
 List* initList(void)
 {
 	List* pRoot = (List*)malloc(sizeof(*pRoot));
-	pRoot->pNext = NULL;
-	
+
+	if (pRoot == NULL)	std::cout << "Allocation error";
+	else
+	{
+		pRoot->pNext = NULL;
+	}
+
 	return pRoot;
 }
 
@@ -15,6 +20,8 @@ void deinitList(List* pRoot)
 {
 	List* pCurrent = pRoot;
 	List* pPrevious;
+
+	if (pRoot == NULL) return;
 
 	while (pRoot->pNext != NULL)
 	{
@@ -37,11 +44,16 @@ void addCar(List* pRoot, const char* plateNum)
 {
 	List* pNext = (List*)malloc(sizeof(*pRoot));
 	List* pCurrent = pRoot;
-	time_t timer;
+
+	if (pNext == NULL)
+	{
+		std::cout << "Allocation error";
+		return;
+	}
 
 	while (pCurrent->pNext != NULL) pCurrent = pCurrent->pNext;
 
-	pNext->entryTime = time(&timer);
+	pNext->entryTime = time(NULL);
 	pNext->pPlateNum = const_cast<char*>(plateNum);
 	pNext->pNext = NULL;
 	pCurrent->pNext = pNext;
@@ -57,7 +69,7 @@ void removeCar(List* pRoot, const char* plateNum)
 		pPrevious = pCurrent;
 		pCurrent = pCurrent->pNext;
 
-		if (pCurrent->pPlateNum == plateNum)
+		if (std::strcmp(pCurrent->pPlateNum, plateNum))
 		{
 			pPrevious->pNext = pCurrent->pNext;
 			free(pCurrent);
