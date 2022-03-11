@@ -1,12 +1,21 @@
 #include "pch.h"
 #include "list.h"
-
-
+#include "iostream"
 
 List* initList(void)
 {
 	List* pRoot = (List*)malloc(sizeof(*pRoot));
-	
+
+	if (pRoot != NULL)
+	{
+        pRoot->pNext = NULL;
+		cout << " Przedzial pamieci jest zakonczony ";
+	}
+	else 
+	{
+		cout << "Blad przydzialu pamieci ";
+	}
+
 	return pRoot;
 }
 
