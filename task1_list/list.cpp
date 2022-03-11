@@ -1,12 +1,21 @@
 #include "pch.h"
 #include "list.h"
-
-
+#include "iostream"
 
 List* initList(void)
 {
-	List* pRoot = (List*)malloc(sizeof(*pRoot));
-	
+        List* pRoot = (List*)malloc(sizeof(*pRoot));
+
+	if (pRoot != NULL)
+	{
+                pRoot->pNext = NULL;
+		cout << "Alokacja pamieci zakonczona pomyslnie :)";
+	}
+	else 
+	{
+		cout << "Blad przydzialu pamieci :(";
+	}
+
 	return pRoot;
 }
 
