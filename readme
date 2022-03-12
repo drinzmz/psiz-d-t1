@@ -35,7 +35,6 @@ void piotr_orwinski(void)
 	Piotr Orwiński
 }
 
-
 void radoslaw_michalak(void)
 {
 	Radosław Michalak
@@ -50,3 +49,9 @@ void bartlomiej_bednarek(void)
 {
 	Bartlomiej Bednarek
 }
+
+void daniel_oblak(void)
+{
+	Daniel Obłąk
+}
+
