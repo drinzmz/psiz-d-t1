@@ -60,3 +60,7 @@ void daniel_oblak(void)
 	Daniel Obłąk
 }
 
+void michal_mosinski(void)
+{
+	Michał Mosiński
+}
