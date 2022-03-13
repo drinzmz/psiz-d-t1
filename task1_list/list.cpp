@@ -6,7 +6,14 @@
 List* initList(void)
 {
 	List* pRoot = (List*)malloc(sizeof(*pRoot));
-	
+	if (pRoot == NULL)
+	{
+		std::cout << "Error alocation!";
+	}
+	else
+	{
+		pRoot->pNext = NULL;
+	}
 	return pRoot;
 }
 
