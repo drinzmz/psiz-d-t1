@@ -6,7 +6,11 @@
 List* initList(void)
 {
 	List* pRoot = (List*)malloc(sizeof(*pRoot));
-	
+	if (pRoot == NULL) {
+		std::cout << "B³¹d podczas alokacji pamiêci";
+		return NULL;
+	}
+	pRoot->pNext = NULL;
 	return pRoot;
 }
 
