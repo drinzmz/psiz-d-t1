@@ -7,11 +7,8 @@ List* initList(void)
 {
 	List* pRoot = (List*)malloc(sizeof(*pRoot));
 
-	if (pRoot == NULL)	std::cout << "Allocation error";
-	else
-	{
-		pRoot->pNext = NULL;
-	}
+	if (NULL == pRoot)	std::cout << "Allocation error";
+	else pRoot->pNext = NULL;
 
 	return pRoot;
 }
@@ -21,7 +18,7 @@ void deinitList(List* pRoot)
 	List* pCurrent = pRoot;
 	List* pPrevious;
 
-	if (pRoot == NULL) return;
+	if (NULL == pRoot) return;
 
 	while (pRoot->pNext != NULL)
 	{
@@ -45,13 +42,13 @@ void addCar(List* pRoot, const char* plateNum)
 	List* pNext = (List*)malloc(sizeof(*pRoot));
 	List* pCurrent = pRoot;
 
-	if (pNext == NULL)
+	if (NULL == pNext)
 	{
 		std::cout << "Allocation error";
 		return;
 	}
 
-	while (pCurrent->pNext != NULL) pCurrent = pCurrent->pNext;
+	while (NULL != pCurrent->pNext) pCurrent = pCurrent->pNext;
 
 	pNext->entryTime = time(NULL);
 	pNext->pPlateNum = const_cast<char*>(plateNum);
@@ -64,7 +61,7 @@ void removeCar(List* pRoot, const char* plateNum)
 	List* pCurrent = pRoot;
 	List* pPrevious;
 
-	while (pCurrent->pNext != NULL)
+	while (NULL != pCurrent->pNext)
 	{
 		pPrevious = pCurrent;
 		pCurrent = pCurrent->pNext;
@@ -84,7 +81,7 @@ void printAll(List* pRoot)
 	List* pCurrent = pRoot->pNext;
 	time_t time;
 
-	while (pCurrent != NULL)
+	while (NULL != pCurrent)
 	{
 		time = pCurrent->entryTime;
 		std::cout << "[" << strtok(ctime(&time),"\n") << "] Wjechal samochod o numerze rejestracyjnym " << pCurrent->pPlateNum << std::endl;
@@ -97,7 +94,7 @@ int numberOfElements(List* pRoot)
 	List* pCurrent = pRoot->pNext;
 	int count = 0;
 
-	while (pCurrent != NULL)
+	while (NULL != pCurrent)
 	{
 		count++;
 		pCurrent = pCurrent->pNext;
