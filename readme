@@ -60,3 +60,7 @@ void daniel_oblak(void)
 	Daniel Obłąk
 }
 
+void adrian_walczak(void)
+{
+	Adrian Walczak
+}
