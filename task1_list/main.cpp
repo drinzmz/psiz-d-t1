@@ -1,25 +1,21 @@
-﻿#include "pch.h"
+#include "pch.h"
 #include "list.h"
 #include <ctime>
 
-List mojaLista;
+using namespace std;
 
-int main()
+List* initList(void)
 {
-	List* firstFloor = initList();
-	addCar(firstFloor, (char*)"AA0000");
-	addCar(firstFloor, (char*)"AA0001");
-	removeCar(firstFloor, (char*)"AA0000");
-	removeCar(firstFloor, (char*)"AA0001");
+	List* pRoot = (List*)malloc(sizeof(*pRoot));
+	if (pRoot != NULL)
+	{
+		cout << "Memory allocation done successfully";
+	}
+	else
+	{
+		cout << "Memory allocation error" << endl;
+	}
 
-	List* secFloor = initList();
-	addCar(secFloor, (char*)"AA0002");
-	addCar(secFloor, (char*)"AA0003");
-	removeCar(secFloor, (char*)"AA0002");
-	removeCar(secFloor, (char*)"AA0003");
-
-	deinitList(firstFloor);
-	deinitList(secFloor);
-
-	return 0;
+	return pRoot;
 }
+
