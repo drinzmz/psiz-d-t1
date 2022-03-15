@@ -17,7 +17,10 @@ List* initList(void)
 void deinitList(List* pRoot)
 {
     free(pRoot->pPlateNum);
-    free(pRoot);
+
+    if (pRoot != NULL) {
+        free(pRoot);
+    }
 }
 
 void addCar(List* pRoot, char* plateNum)
