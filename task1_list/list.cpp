@@ -9,6 +9,7 @@ List* initList(void)
 	pRoot->pNext = NULL;
 	
 	return pRoot;
+	
 }
 
 void deinitList(List* pRoot)
