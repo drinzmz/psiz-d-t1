@@ -6,14 +6,34 @@
 List* initList(void)
 {
 	List* pRoot = (List*)malloc(sizeof(*pRoot));
+	pRoot->pNext = NULL;
 	
 	return pRoot;
 }
 
 void deinitList(List* pRoot)
 {
+	List* pCurrent = pRoot;
+	List* pPrev;
+	
+	while(pRoot->pNext != NULL)
+	{
+		while(pCurrent->pNext != NULL)
+		{
+			pPrev = pCurrent;
+			pCurrent = pCurrent->pNext;
+		}
+		free(pCurrent);
+		pCurrent = NULL;
+		pPrev->pNext = NULL;
+		pCurrent = pRoot;
+	}
+	
 	free(pRoot);
 	pRoot = NULL;
+	pRoot->pNext = NULL;
+	
+	
 }
 
 void addCar(List* pRoot, char* plateNum)
