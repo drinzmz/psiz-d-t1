@@ -1,13 +1,10 @@
 #include "pch.h"
 #include "list.h"
-#include "iostream"
-using namespace std;
 
 
 
 List* initList(void)
 {
-<<<<<<< dev
     List* pRoot = (List*)malloc(sizeof(*pRoot));
     pRoot->pPlateNum = (char*)malloc(strlen("Root") + 1u);
     strcpy(pRoot->pPlateNum, "Root");
@@ -15,36 +12,6 @@ List* initList(void)
     pRoot->pNext = NULL;
 
     return pRoot;
-=======
-	List* pRoot = (List*)malloc(sizeof(*pRoot));
-
-	 if (pRoot != NULL)
-
-		{
-
-			pRoot->pNext = NULL;
-			cout << "Memory allocation succesful";
-
-		}
-
-		else if (pRoot == NULL)
-
-			{
-
-				cout << "Memory allocation error";
-
-			}
-		
-			else
-
-				{
-
-					cout << "Unknown Error";
-	
-				}
-
-				return pRoot;
->>>>>>> dev
 }
 
 void deinitList(List* pRoot)
@@ -120,7 +87,15 @@ void removeCar(List* pRoot, char* plateNum)
 }
 void printAll(List* pRoot) 
 {
+    List* pCurrent = pRoot->pNext;
+    time_t time;
 
+    while (NULL != pCurrent)
+    {
+        time = pCurrent->entryTime;
+        std::cout << "[" << strtok(ctime(&time), "\n") << "] Wjechal samochod o numerze rejestracyjnym " << pCurrent->pPlateNum << std::endl;
+        pCurrent = pCurrent->pNext;
+    }
 }
 
 int numberOfElements(List* pRoot)
