@@ -31,7 +31,7 @@ void addCar(List* pRoot, char* plateNum)
     }
 
     pNewElement = (List*)malloc(sizeof(*pNewElement));
-    pNewElement->pPlateNum = (char*)malloc(strlen(plateNum) + 1u);
+    pNewElement->pPlateNum = (char*)malloc(strlen(plateNum) + 1u); //We use 1u (unsigned int), since the number of chars in plateNum can't be negative
     strcpy(pNewElement->pPlateNum, plateNum);
     time(&(pNewElement->entryTime));
     pNewElement->pNext = NULL;
