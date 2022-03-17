@@ -21,7 +21,6 @@ void deinitList(List* pRoot)
 }
 
 void addCar(List* pRoot, char* plateNum)
-
 {
     List* pLastElement = pRoot;
     List* pNewElement = NULL;
