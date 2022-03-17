@@ -6,9 +6,20 @@ List mojaLista;
 
 int main()
 {
-	List* pFirstFloor = initList();
-	List* pSecFloor = initList();
-	
-	deinitList(pFirstFloor);
-	deinitList(pSecFloor);
+	List* firstFloor = initList();
+	addCar(firstFloor, (char*)"AA0000");
+	addCar(firstFloor, (char*)"AA0001");
+	removeCar(firstFloor, (char*)"AA0000");
+	removeCar(firstFloor, (char*)"AA0001");
+
+	List* secFloor = initList();
+	addCar(secFloor, (char*)"AA0002");
+	addCar(secFloor, (char*)"AA0003");
+	removeCar(secFloor, (char*)"AA0002");
+	removeCar(secFloor, (char*)"AA0003");
+
+	deinitList(firstFloor);
+	deinitList(secFloor);
+
+	return 0;
 }

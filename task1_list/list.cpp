@@ -85,7 +85,9 @@ void removeCar(List* pRoot, char* plateNum)
     }
 
 }
-void printAll(List* pRoot)
+
+void printAll(List* pRoot) 
+
 {
 
 }

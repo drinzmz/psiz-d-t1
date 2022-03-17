@@ -35,7 +35,6 @@ void piotr_orwinski(void)
 	Piotr Orwiński
 }
 
-
 void radoslaw_michalak(void)
 {
 	Radosław Michalak
@@ -45,3 +44,19 @@ void yuliia_kovalchuk(void)
 {
 	Yuliia Kovalchuk
 }
+
+void dominik_szpilski(void)
+{
+	Dominik Szpilski
+}
+
+void bartlomiej_bednarek(void)
+{
+	Bartlomiej Bednarek
+}
+
+void daniel_oblak(void)
+{
+	Daniel Obłąk
+}
+
