@@ -85,12 +85,14 @@ void removeCar(List* pRoot, char* plateNum)
     }
 
 }
+
 void printAll(List* pRoot) 
+
 {
 
 }
 
 int numberOfElements(List* pRoot)
 {
-	return 0;
+        return 0;
 }
