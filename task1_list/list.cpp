@@ -21,6 +21,13 @@ void deinitList(List* pRoot)
 }
 
 void addCar(List* pRoot, char* plateNum)
+	
+   if (NULL!=pPlateNum)
+   {
+       pPlateNum ->pNext = NULL
+       std:: cout << "pPlateNum, not empty";
+   }
+
 {
     List* pLastElement = pRoot;
     List* pNewElement = NULL;
@@ -94,5 +101,7 @@ void printAll(List* pRoot)
 
 int numberOfElements(List* pRoot)
 {
-        return 0;
+
+	return 0;
 }
+
