@@ -87,15 +87,7 @@ void removeCar(List* pRoot, char* plateNum)
 }
 void printAll(List* pRoot) 
 {
-    List* pCurrent = pRoot->pNext;
-    time_t time;
 
-    while (NULL != pCurrent)
-    {
-        time = pCurrent->entryTime;
-        std::cout << "[" << strtok(ctime(&time), "\n") << "] Wjechal samochod o numerze rejestracyjnym " << pCurrent->pPlateNum << std::endl;
-        pCurrent = pCurrent->pNext;
-    }
 }
 
 int numberOfElements(List* pRoot)
