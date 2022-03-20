@@ -25,6 +25,7 @@ void addCar(List* pRoot, char* plateNum)
 	else
 	{
         cout << "pRoot is not empty ";
+		
     }
 void removeCar(List* pRoot, char* plateNum)
 {
