@@ -47,25 +47,22 @@ void removeCar(List* pRoot, char* plateNum)
 }
 void printAll(List* pRoot) {
 	
-	List* pCurrent = pRoot;
-	int i = 1;
-	
-	while( pCurrent->pNext != NULL )
-	{
-		std::cout << i << ", ";
-		while( pPlateNumb != NULL )
-		{
-			std::cout << pCurrent->pPlateNum;
-			pCurrent->pPlateNum++;
-		}
-		std::cout << " " << ctime(pCurrent->entryTime << "\n";
-		i++;
-		
-	}
-
 }
 
 int numberOfElements(List* pRoot)
 {
-	return 0;
+	List* pCurrent = pRoot;
+	int number = 0;
+	
+	if ( pRoot == NULL )
+		return 0;
+	
+	
+	while( pCurrent->pNext != NULL )
+	{
+		pCurrent = pCurrent->pNext;
+		number++;
+	}
+	
+	return number+1;
 }
