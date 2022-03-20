@@ -21,11 +21,11 @@ void addCar(List* pRoot, char* plateNum)
    
     if(pRoot.size() === 0){
         cout << "pRoot is empty";
-    }else{
+    }
+	else
+	{
         cout << "pRoot is not empty ";
     }
-}
-
 void removeCar(List* pRoot, char* plateNum)
 {
 
