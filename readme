@@ -1,0 +1,62 @@
+# Task 1
+Dodaj na końcu tego pliku przykladowa funkcje zawierającą Twoje imie i nazwisko:
+
+void jan_kowalski(void)
+{
+	Jan Kowalski
+}
+
+void marcin_nowak(void)
+{
+	Marcin Nowak
+}
+
+string:: mateusz_piekny(void)
+{
+	return "Mateusz Piekny";
+}
+
+void anastasiia_proturenko(void)
+{
+	Anastasiia Proturenko
+}
+
+void damian_batorowicz(void)
+{
+	Damian Batorowicz
+}	
+
+void aleksander_trzeciak(void)
+{
+	Aleksander Trzeciak
+
+void piotr_orwinski(void)
+{
+	Piotr Orwiński
+}
+
+void radoslaw_michalak(void)
+{
+	Radosław Michalak
+}
+
+void yuliia_kovalchuk(void)
+{
+	Yuliia Kovalchuk
+}
+
+void dominik_szpilski(void)
+{
+	Dominik Szpilski
+}
+
+void bartlomiej_bednarek(void)
+{
+	Bartlomiej Bednarek
+}
+
+void daniel_oblak(void)
+{
+	Daniel Obłąk
+}
+
