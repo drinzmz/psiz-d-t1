@@ -5,16 +5,6 @@ List* initList(void)
 {
 	List* pRoot = (List*)malloc(sizeof(*pRoot));
 
-	if (pRoot != NULL)
-	{
-		pRoot->pNext = NULL;
-		std::cout << "Alokacja pamieci zakonczona pomyslnie :)";
-	}
-	else
-	{
-		std::cout << "Blad przydzialu pamieci :(";
-	}
-
 	return pRoot;
 }
 
