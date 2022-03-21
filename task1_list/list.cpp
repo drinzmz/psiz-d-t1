@@ -1,9 +1,15 @@
 #include "pch.h"
 #include "list.h"
 
+
+
 List* initList(void)
 {
-	List* pRoot = (List*)malloc(sizeof(*pRoot));
+    List* pRoot = (List*)malloc(sizeof(*pRoot));
+    pRoot->pPlateNum = (char*)malloc(strlen("Root") + 1u);
+    strcpy(pRoot->pPlateNum, "Root");
+    time(&(pRoot->entryTime));
+    pRoot->pNext = NULL;
 
 	if (pRoot != NULL)
 	{
@@ -42,8 +48,13 @@ void deinitList(List* pRoot)
 	pRoot = NULL;
 	pRoot->pNext = NULL;
 	
-	
+    return pRoot;
+}
 
+void deinitList(List* pRoot)
+{
+    free(pRoot->pPlateNum);
+    free(pRoot);
 }
 
 void addCar(List* pRoot, char* plateNum)
@@ -111,6 +122,7 @@ void removeCar(List* pRoot, char* plateNum)
     }
 
 }
+
 
 void printAll(List* pRoot) {
 	
