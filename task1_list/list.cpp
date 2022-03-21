@@ -87,8 +87,7 @@ void removeCar(List* pRoot, char* plateNum)
 }
 void printAll(List* pRoot) 
 {
-    //This func shall print (std::cout) all elements in the list
-    //printed in the human readable format
+
 }
 
 int numberOfElements(List* pRoot)
