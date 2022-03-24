@@ -1,4 +1,4 @@
-#include "pch.h"
+﻿#include "pch.h"
 #include "list.h"
 
 
@@ -6,11 +6,12 @@
 List* initList(void)
 {
     List* pRoot = (List*)malloc(sizeof(*pRoot));
-    pRoot->pPlateNum = (char*)malloc(strlen("Root") + 1u);
-    strcpy(pRoot->pPlateNum, "Root");
-    time(&(pRoot->entryTime));
-    pRoot->pNext = NULL;
 
+    if (pRoot == NULL) {
+        std::cout << "B³¹d podczas alokacji pamiêci";
+        return NULL;
+    }
+    pRoot->pNext = NULL;
     return pRoot;
 }
 
@@ -32,7 +33,10 @@ void addCar(List* pRoot, char* plateNum)
 
     pNewElement = (List*)malloc(sizeof(*pNewElement));
     pNewElement->pPlateNum = (char*)malloc(strlen(plateNum) + 1u);
-    strcpy(pNewElement->pPlateNum, plateNum);
+    strcpy(pNewElement->pPlateNum, plateNum);//Funkcja strcpy() nie sprawdza, czy jest wystarczająco dużo miejsca na miejsce docelowe.
+                                              //Może to być niebezpieczne, ponieważ strcpy() zastąpi obszar pamięci poza docelowym limitem, 
+                                              //co może spowodować przepełnienie bufora. 
+                                              //Dlatego zaleca się, aby zamiast tego używać strcpy_s.
     time(&(pNewElement->entryTime));
     pNewElement->pNext = NULL;
     pLastElement->pNext = pNewElement;
@@ -85,12 +89,12 @@ void removeCar(List* pRoot, char* plateNum)
     }
 
 }
-void printAll(List* pRoot) 
+void printAll(List* pRoot)
 {
 
 }
 
 int numberOfElements(List* pRoot)
 {
-	return 0;
+    return 0;
 }
