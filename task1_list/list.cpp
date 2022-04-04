@@ -5,14 +5,17 @@
 
 List* initList(void)
 {
-    List* pRoot = (List*)malloc(sizeof(*pRoot));
-    pRoot->pPlateNum = (char*)malloc(strlen("Root") + 1u);
-    strcpy(pRoot->pPlateNum, "Root");
-    time(&(pRoot->entryTime));
-    pRoot->pNext = NULL;
-
-    return pRoot;
-}
+  List* pRoot = (List*)malloc(sizeof(*pRoot));
+  if (pRoot == NULL) {
+      std::cout << "Allocation Error, returning null";
+      return NULL;
+  }
+  pRoot->pPlateNum = (char*)malloc(strlen("Root") + 1u);
+  strcpy(pRoot->pPlateNum, "Root");
+  time(&(pRoot->entryTime));
+  pRoot->pNext = NULL;
+	return pRoot;
+} 
 
 void deinitList(List* pRoot)
 {
